@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: #f4f1ec;
+  --color-secondary: #858d78;
+   --color-accent: #9ea292;
+  /* --color-secondary: #47483d; */
+  /* --color-accent: #858d78; */
+  --color-dark: #454b33;
+  /* --color-base:#9ea292; */
+}
+
+@font-face {
+    font-family: "Canela";
+    src: url("./fonts/CanelaDeck-Regular-Trial.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Canela";
+    src: url("./fonts/CanelaDeck-Bold-Trial.woff2") format("woff2");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Peyda";
+    src: url("../public/fonts/Peyda-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: "Peydab";
+    src: url("../public/fonts/Peyda-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+body{
+
+  background-color: #f4f1ec;
+  font-family:"Peyda";
+}
+
+.HeadingName{
+  font-family: "Canela", serif;
+  color: #f4f1ec;
+
+}
+.BannerTop{
+  font-weight: 100 !important;
+  text-align: right;
+}
+.BannerTop h1{
+font-family: "Peyda" !important;
+}
+.swiper{
+  padding: 0 !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 2rem !important;
+  height: 2rem !important;
+  color:#454b33 !important;
+
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+
+}
+.new{
+   font-family: "Canela";
+  }
+  /* Headings */
+.section-title{
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 1.1;
+}
+
+.card-title{
+  font-family: "Peydab";
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  line-height: 1.2;
+}
+
+/* Paragraphs */
+.body-text{
+  font-family: "Peyda";
+  font-size: clamp(.9rem, 1.3vw, 1rem);
+  line-height: 1.9;
+}
+
+/* Small text */
+.small-text{
+  font-family: "Peyda";
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  line-height: 1.7;
+}
