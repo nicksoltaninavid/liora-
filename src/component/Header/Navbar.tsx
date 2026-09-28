@@ -9,10 +9,13 @@ import { useCart } from "../store/cart";
 import CartDrawer from "../Cart/CartDrawer";
 import { FaRegHeart } from "react-icons/fa";
 import { useWishlist } from "../store/wishlist";
+import { IoSearchOutline } from "react-icons/io5";
+import SearchModal from "../Search/SearchModal";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const location = useLocation();
@@ -68,6 +71,14 @@ function Navbar() {
         className={`sticky top-4 z-50 mx-auto flex w-[90%] max-w-7xl items-center justify-between rounded-3xl border transition-colors duration-300 ${barCls}`}
       >
         <div className="flex items-center gap-4 pr-6">
+          <button
+            type="button"
+            onClick={() => setSearchOpen(true)}
+            aria-label="جستجو"
+            className={`cursor-pointer text-2xl duration-300 md:text-3xl ${hoverCls}`}
+          >
+            <IoSearchOutline />
+          </button>
           <Link
             to="/wishlist"
             aria-label="علاقه‌مندی‌ها"
@@ -161,6 +172,7 @@ function Navbar() {
       </nav>
 
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
+        <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 }
