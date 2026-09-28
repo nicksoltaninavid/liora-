@@ -54,7 +54,7 @@ function SearchModal({ open, onClose }: SearchModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className="fixed inset-0 z-[90] bg-dark/40 backdrop-blur-[2px]"
+            className="fixed inset-0 z-90 bg-dark/40 backdrop-blur-[2px]"
           />
 
           {/* پنل سرچ — از بالا میاد پایین */}
@@ -67,7 +67,7 @@ function SearchModal({ open, onClose }: SearchModalProps) {
             role="dialog"
             aria-modal="true"
             aria-label="جستجوی محصولات"
-            className="fixed inset-x-4 top-20 z-[95] mx-auto max-w-xl rounded-3xl bg-primary p-4 shadow-2xl sm:top-24"
+            className="fixed inset-x-4 top-20 z-95 mx-auto max-w-xl rounded-3xl bg-primary p-4 shadow-2xl sm:top-24"
           >
             {/* فیلد جستجو */}
             <div className="flex items-center gap-3 rounded-full border border-dark/15 bg-white/60 px-4 py-3 transition-colors focus-within:border-secondary">

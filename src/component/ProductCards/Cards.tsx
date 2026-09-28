@@ -40,7 +40,7 @@ function Cards({ product }: CardsProps) {
         type="button"
         onClick={handleToggleWish}
         aria-label={wished ? "حذف از علاقه‌مندی‌ها" : "افزودن به علاقه‌مندی‌ها"}
-        className={`absolute top-3 end-3 z-10 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-primary/90 shadow-md transition duration-300 active:scale-90 ${
+        className={`absolute top-3 inset-e-3 z-10 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-primary/90 shadow-md transition duration-300 active:scale-90 ${
           wished ? "text-red-500" : "text-dark/50"
         }`}
       >
