@@ -11,25 +11,25 @@
 
 @font-face {
     font-family: "Canela";
-    src: url("./fonts/CanelaDeck-Regular-Trial.woff2") format("woff2");
+    src: url("/fonts/CanelaDeck-Regular-Trial.woff2") format("woff2");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Canela";
-    src: url("./fonts/CanelaDeck-Bold-Trial.woff2") format("woff2");
+    src: url("/fonts/CanelaDeck-Bold-Trial.woff2") format("woff2");
     font-weight: 700;
 }
 @font-face {
     font-family: "Peyda";
-    src: url("../public/fonts/Peyda-Regular.woff2") format("woff2");
+    src: url("/fonts/Peyda-Regular.woff2") format("woff2");
     font-weight: 400;
     font-display: swap; 
 }
 
 @font-face {
     font-family: "Peydab";
-    src: url("../public/fonts/Peyda-Bold.woff2") format("woff2");
+    src: url("/fonts/Peyda-Bold.woff2") format("woff2");
     font-weight: 700;
 }
 body{

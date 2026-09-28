@@ -1,5 +1,5 @@
 import categoryHair from "../assets/category2.webp";
-import categoryBody from "../assets/Category1.webp";
+import categoryBody from "../assets/category1.webp";
 
 export interface Category {
   id: string;
