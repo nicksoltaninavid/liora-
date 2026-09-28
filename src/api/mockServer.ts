@@ -23,6 +23,11 @@ import product2 from "../assets/4-4.webp";
 import product3 from "../assets/3-3.webp";
 import product4 from "../assets/2-2.webp";
 import product5 from "../assets/5-5.webp";
+import product6 from "../assets/Vitamin_C.png";
+import product7 from "../assets/Radiant_Glow_Serum.png";
+import product8 from "../assets/Nourishing_Hair.png";
+import product9 from "../assets/Gentle_Shampoo.png";
+import product10 from "../assets/Sugar_Body_Scrub.png";
 
 const productsMock: Product[] = [
   { id: "eye-cream", image: product1, title: "Eye Cream", subtitle: "کرم دور چشم", description: "کرمی سبک و مؤثر که به کاهش تیرگی، پف و خطوط ریز اطراف چشم کمک میکند.", price: 450_000, category: "skincare" },
@@ -32,4 +37,9 @@ const productsMock: Product[] = [
   { id: "hyaluronic-serum", image: product5, title: "Hyaluronic Serum", subtitle: "سرم هیالورونیک اسید", description: "آبرسانی عمیق با فرمولی سبک که رطوبت را در لایه‌های پوست حفظ میکند.", price: 890_000, category: "skincare" },
   { id: "hair-mask", image: product3, title: "Hair Mask", subtitle: "ماسک مغذی مو", description: "ماسکی غنی برای بازسازی و درخشندگی موهای خشک و آسیب‌دیده.", price: 390_000, category: "haircare" },
   { id: "body-lotion", image: product1, title: "Body Lotion", subtitle: "لوسیون بدن", description: "لوسیونی سبک با جذب سریع برای نرمی و آبرسانی روزانه‌ی پوست بدن.", price: 320_000, category: "bodycare" },
+  { id: "vitamin-c-serum", image: product6, title: "Vitamin C Serum", subtitle: "سرم ویتامین C", description: "سرم آنتی‌اکسیدان قوی برای روشن‌سازی پوست و محو کردن لک و تیرگی.", price: 950_000, category: "skincare" },
+  { id: "Radiant_Glow_Serum", image: product7, title: "Radiant Glow Serum", subtitle: "سرم روشن‌پوست", description: "سرمی با ترکیبات مؤثر برای افزایش روشنی و سلامت پوست.", price: 1_200_000, category: "skincare" },
+  { id: "hair-oil", image: product8, title: "Nourishing Hair Oil", subtitle: "روغن مغذی مو", description: "ترکیبی از روغن‌های طبیعی برای تقویت ریشه، کاهش وز و درخشندگی مو.", price: 410_000, category: "haircare" },
+  { id: "shampoo", image: product9, title: "Gentle Shampoo", subtitle: "شامپو ملایم", description: "شامپوی بدون سولفات برای شست‌وشوی لطیف و حفظ رطوبت طبیعی مو.", price: 280_000, category: "haircare" },
+  { id: "body-scrub", image: product10, title: "Sugar Body Scrub", subtitle: "اسکراب شکر بدن", description: "اسکرابی لطیف با دانه‌های شکر و روغن بادام برای لایه‌برداری و نرمی پوست.", price: 350_000, category: "bodycare" },
 ];

@@ -21,7 +21,7 @@ function Slider() {
 
   // 👇 دیتا از کش مشترک — همون queryKey: ["products"]
   const { data, isPending, isError, refetch } = useProducts();
-  const products = data?.slice(0, 5) ?? []; // ۵ تا اول — بعداً «پرفروش‌ترین» از سرور
+  const products = data?.slice(0, 12) ?? []; // ۵ تا اول — بعداً «پرفروش‌ترین» از سرور
 
   const syncNavState = (s: SwiperType) => {
     setIsBeginning(s.isBeginning);
