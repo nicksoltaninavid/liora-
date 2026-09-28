@@ -35,9 +35,9 @@ const footerLinks = [
 ];
 
 const socials = [
-  { label: "اینستاگرام", href: "https://instagram.com/liora", Icon: FiInstagram },
-  { label: "تلگرام", href: "https://t.me/liora", Icon: FaTelegramPlane },
-  { label: "واتساپ", href: "https://wa.me/989000000000", Icon: RiWhatsappLine },
+  { label: "اینستاگرام", href: "https://instagram.com/", Icon: FiInstagram },
+  { label: "تلگرام", href: "https://t.me/", Icon: FaTelegramPlane },
+  { label: "واتساپ", href: "https://wa.me/", Icon: RiWhatsappLine },
 ];
 
 function Footer() {

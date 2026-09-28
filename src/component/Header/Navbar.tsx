@@ -7,6 +7,8 @@ import { IoClose } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
 import { useCart } from "../store/cart";
 import CartDrawer from "../Cart/CartDrawer";
+import { FaRegHeart } from "react-icons/fa";
+import { useWishlist } from "../store/wishlist";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +36,7 @@ function Navbar() {
   const count = useCart((s) =>
     s.items.reduce((total, item) => total + item.quantity, 0),
   );
-
+  const wishCount = useWishlist((s) => s.items.length);
   const navLinks = [
     { label: "Skincare", to: "/shop?category=skincare" },
     { label: "Hair & Body", to: "/shop?category=haircare" },
@@ -65,18 +67,33 @@ function Navbar() {
       <nav
         className={`sticky top-4 z-50 mx-auto flex w-[90%] max-w-7xl items-center justify-between rounded-3xl border transition-colors duration-300 ${barCls}`}
       >
-        <button
-          type="button"
-          onClick={() => setCartOpen(true)}
-          className={`relative cursor-pointer text-2xl duration-300 md:text-3xl pr-6 ${hoverCls}`}
-        >
-          <FaCartShopping />
-          {count > 0 && (
-            <span className="absolute -top-2 -right-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-dark px-1 text-xs font-bold text-primary">
-              {new Intl.NumberFormat("fa-IR").format(count)}
-            </span>
-          )}
-        </button>
+        <div className="flex items-center gap-4 pr-6">
+          <Link
+            to="/wishlist"
+            aria-label="علاقه‌مندی‌ها"
+            className={`relative text-2xl duration-300 md:text-3xl ${hoverCls}`}
+          >
+            <FaRegHeart />
+            {wishCount > 0 && (
+              <span className="absolute -top-2 -right-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-dark px-1 text-xs font-bold text-primary">
+                {new Intl.NumberFormat("fa-IR").format(wishCount)}
+              </span>
+            )}
+          </Link>
+
+          <button
+            type="button"
+            onClick={() => setCartOpen(true)}
+            className={`relative cursor-pointer text-2xl duration-300 md:text-3xl ${hoverCls}`}
+          >
+            <FaCartShopping />
+            {count > 0 && (
+              <span className="absolute -top-2 -right-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-dark px-1 text-xs font-bold text-primary">
+                {new Intl.NumberFormat("fa-IR").format(count)}
+              </span>
+            )}
+          </button>
+        </div>
 
         <ul className="hidden items-center gap-10 font-light lg:flex">
           {navLinks.map((link) => (

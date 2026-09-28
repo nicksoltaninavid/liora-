@@ -10,6 +10,7 @@ const ProductPage = lazy(() => import("./pages/Product"));
 const NotFoundPage = lazy(() => import("./pages/NotFound"));
 const CheckoutPage = lazy(() => import("./pages/Checkout"));
 const AboutPage = lazy(() => import("./pages/About"));
+const WishlistPage = lazy(() => import("./pages/Wishlist"));
 
 // تا صفحه lazy لود بشه، این اسپینر نمایش داده می‌شه
 const pageFallback = (
@@ -62,6 +63,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={pageFallback}>
             <AboutPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "wishlist",
+        element: (
+          <Suspense fallback={pageFallback}>
+            <WishlistPage />
           </Suspense>
         ),
       },
