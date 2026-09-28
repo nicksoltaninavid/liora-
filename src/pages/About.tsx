@@ -28,7 +28,7 @@ function AboutPage() {
               alt="محصولات مراقبتی لیورا"
               loading="lazy"
               decoding="async"
-              className="aspect-[4/3] w-full rounded-3xl object-cover"
+              className="aspect-4/3 w-full rounded-3xl object-cover"
             />
           </ScrollReveal>
 

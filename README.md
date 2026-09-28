@@ -1,75 +1,44 @@
-# React + TypeScript + Vite
+🌿 Liora — فروشگاه محصولات مراقبت پوست و مو
+فروشگاه آنلاین کامل با تجربه‌ی خرید یکپارچه: از مرور محصولات و فیلتر پیشرفته تا سبد خرید و تسویه‌حساب با اعتبارسنجی فرم.
+![alt text](image.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 دموی زنده: liora-pearl.vercel.app
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+✨ امکانات
+فروشگاه
+🛍️ صفحه‌ی محصولات با فیلتر دسته‌بندی و مرتب‌سازی بر اساس قیمت — همگام با URL (قابل اشتراک‌گذاری و رفرش‌پذیر)
+🔍 جستجوی زنده در مودال، بدون درخواست اضافه به سرور (فیلتر روی کش)
+❤️ علاقه‌مندی‌ها با پایداری پس از رفرش
+🖼️ اسلایدر محصولات با پشتیبانی کامل RTL، ناوبری کیبورد و دسترسی‌پذیری
+سبد خرید و خرید
+🛒 سبد خرید با Zustand + پایداری در localStorage
+🧺 Drawer کشویی: تغییر تعداد، حذف، جمع کل زنده
+✅ تسویه‌حساب با اعتبارسنجی فارسی (شماره موبایل و کد پستی با ارقام فارسی هم پذیرفته می‌شوند!)
+فنی
+⚡ TanStack Query با کش مشترک بین صفحات — مرور دوباره‌ی صفحات بدون لودینگ
+💀 Skeleton Loading برای همه‌ی دریافت‌های داده
+🎨 UI تمام‌RTL با تایپوگرافی ترکیبی فارسی/انگلیسی
+♿ دسترسی‌پذیری: aria-labels، ناوبری کیبورد، احترام به prefers-reduced-motion
+📱 موبایل‌فرست واقعی — طراحی از ۳۲۰px تا 4K
+🛠️ تکنولوژی‌ها
+لایه	ابزار
+فریم‌ورک	React 19 + TypeScript
+استایل	Tailwind CSS v4 (theme tokens, cascade layers)
+روتر	React Router v7 (lazy routes + Suspense)
+مدیریت state	Zustand (+ persist middleware)
+داده‌ی سرور	TanStack Query v5
+فرم	React Hook Form + Zod
+انیمیشن	Framer Motion
+🚀 اجرا در محیط محلی
+# نصبnpm install# اجرای محلیnpm run dev# بیلد برای انتشارnpm run build# بهینه‌سازی تصاویر به WebPnpm run optimize:images
+🏗️ نکات معماری
+جدا‌سازی لایه‌ها: کامپوننت‌ها به API دسترسی مستقیم ندارند — همه از هوک‌های سفارشی (useProducts) استفاده می‌کنند. مهاجرت به API واقعی فقط تغییر یک فایل است.
+URL به‌عنوان منبع حقیقت: فیلترها و مرتب‌سازی در query params زندگی می‌کنند، نه state — نتیجه: لینک قابل اشتراک، سازگاری با دکمه‌ی بازگشت مرورگر.
+کش مشترک: همه‌ی صفحاتی که به محصولات نیاز دارند از یک queryKey می‌خوانند؛ نتیجه: ناوبری فوری بین صفحات.
+📈 پرفورمنس
+تمام تصاویر WebP (~۹۰٪ سبک‌تر از PNG)
+فونت‌های WOFF2 با font-display: swap و preload
+Code-splitting در سطح صفحه (هر route باندل جدا)
+📄 License
+MIT
+Author / Contact: Nick Soltani, nicksoltaninavid@gamil.com
