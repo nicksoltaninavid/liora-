@@ -23,11 +23,11 @@ import product2 from "../assets/4-4.webp";
 import product3 from "../assets/3-3.webp";
 import product4 from "../assets/2-2.webp";
 import product5 from "../assets/5-5.webp";
-import product6 from "../assets/Vitamin_C.png";
-import product7 from "../assets/Radiant_Glow_Serum.png";
-import product8 from "../assets/Nourishing_Hair.png";
-import product9 from "../assets/Gentle_Shampoo.png";
-import product10 from "../assets/Sugar_Body_Scrub.png";
+import product6 from "../assets/Vitamin_C.webp";
+import product7 from "../assets/Radiant_Glow_Serum.webp";
+import product8 from "../assets/Nourishing_Hair.webp";
+import product9 from "../assets/Gentle_Shampoo.webp";
+import product10 from "../assets/Sugar_Body_Scrub.webp";
 
 const productsMock: Product[] = [
   { id: "eye-cream", image: product1, title: "Eye Cream", subtitle: "کرم دور چشم", description: "کرمی سبک و مؤثر که به کاهش تیرگی، پف و خطوط ریز اطراف چشم کمک میکند.", price: 450_000, category: "skincare" },
