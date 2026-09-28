@@ -1,4 +1,4 @@
-import type { Product } from "../data/products";
+import type { Product } from "../types/product";
 import { fetchProductsFromServer } from "./mockServer";
 
 export function fetchProducts(): Promise<Product[]> {

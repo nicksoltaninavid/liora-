@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { FiChevronDown } from "react-icons/fi";
-import type { ProductCategory } from "../data/products"; // 👈 جدید
+import type { ProductCategory } from "../types/product"; // 👈 جدید
 import { useProducts } from "../hooks/useProducts";
 import { formatPrice } from "../utils/format";
 

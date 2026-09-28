@@ -55,7 +55,7 @@ function CategoryCard({
 
             {/* عنوان — فقط کارت‌های ساده (کارت ویژه متنش بالانه) */}
             {!featured && (
-              <h3 className="absolute bottom-4 start-4 text-lg font-semibold text-primary sm:text-xl lg:text-2xl">
+              <h3 className="absolute bottom-4 inset-s-4 text-lg font-semibold text-primary sm:text-xl lg:text-2xl">
                 {title}
               </h3>
             )}
